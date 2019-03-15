@@ -21,7 +21,7 @@ class Location(models.Model):
     def get_location_id(cls, id):
         locate = Location.objects.get(pk = id)
         return locate
-  
+     
           
 class Category(models.Model):
     category = models.CharField(max_length =30)
