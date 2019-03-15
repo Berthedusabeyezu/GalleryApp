@@ -22,7 +22,7 @@ class Location(models.Model):
         locate = Location.objects.get(pk = id)
         return locate
   
-   
+      
 class Category(models.Model):
     category = models.CharField(max_length =30)
 
