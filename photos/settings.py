@@ -84,7 +84,7 @@ DATABASES = {
     'PASSWORD':'1234',
     
     }
-}
+}  
 
 
 # Password validation
