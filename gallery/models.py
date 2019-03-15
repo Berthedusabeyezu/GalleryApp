@@ -48,7 +48,7 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
-      
+          
     @classmethod   
     def get_image(cls,id):
         try:
