@@ -15,4 +15,4 @@ https://github.com/Berthedusabeyezu/GalleryApp
 
 ## copyright and license information
 
-This project is under MIT License. Copyright (c) 2019 Berthe         
+This project is under MIT License. Copyright (c) 2019 Berthe            
