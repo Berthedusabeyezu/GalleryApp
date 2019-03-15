@@ -14,7 +14,7 @@ class Location(models.Model):
         self.delete()
     
     def update_location(self, update):
-        self.photo_location = update
+        self.photo_location = update 
         self.save()
 
     @classmethod
@@ -28,7 +28,7 @@ class Category(models.Model):
 
     def __str__(self): 
         return self.category
-    
+     
     def save_category(self):
         self.save()
     
