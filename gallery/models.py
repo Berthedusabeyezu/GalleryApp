@@ -34,7 +34,7 @@ class Category(models.Model):
           
     def delete_category(self):
         self.delete()
-    
+      
     def update_category(self, update):
         self.category = update
         self.save()
