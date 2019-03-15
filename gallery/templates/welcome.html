@@ -4,7 +4,7 @@
 {% for img in images %}
    <div class="col-sm-6 col-md-3"> 
        <a data-toggle="modal" data-target="#{{img.id}}">
-            <img src="{{img.image_photo.url}}" alt="Image">
+            <img src="{{img.image_photo.url}}" alt="Image" width='400' height ='400'border = '1px solid #ccc'>
         </a>
 
             <div id="{{img.id}}" class="modal fade" role="dialog" style="background-color:rgb(168, 105, 105);color:rgb(47, 61, 61);font-family: monospace;">

@@ -7,11 +7,15 @@ class LocationTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.photo = Location(photo_location = 'Image')
+        self.image= Location(photo_name = 'photo', description ='Good photo', location ='profile',category='sorpt')
     
     #Testing  instance
     def test_instance(self):
         self.assertTrue(isinstance(self.photo,Location))
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image,Location))
     
      # Testing Save Method
     def test_save_method(self):
