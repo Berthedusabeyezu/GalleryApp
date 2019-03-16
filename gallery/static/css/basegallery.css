@@ -2,10 +2,7 @@ h1
 {
   color: green;
 }
-.imge{
-  margin: 5px;
-  border: 1px solid #ccc;
-  width: 180px;
-  height: auto;
-  padding: 15px;
+body{
+  background-color: gray;
+  border: 5px solid black;
 }

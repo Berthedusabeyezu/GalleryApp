@@ -1,38 +1,40 @@
 {%extends 'all-galleries/base.html'%}
 {% block content %} 
-<h1> Welcome to Gallery Application</h1> 
-{% for img in images %}
-   <div class="col-sm-6 col-md-3"> 
-       <a data-toggle="modal" data-target="#{{img.id}}">
-            <img src="{{img.image_photo.url}}" alt="Image" width='400' height ='400'border = '1px solid #ccc'>
-        </a>
+<body>
+    <h1> Welcome to Gallery Application</h1> 
+    {% for img in images %}
+        <div class="col-sm-6 col-md-3"> 
+            <a data-toggle="modal" data-target="#{{img.id}}">
+                <img src="{{img.image_photo.url}}" alt="Image" width='400' height ='400'border = '1px solid #ccc'>
+            </a>
 
-            <div id="{{img.id}}" class="modal fade" role="dialog" style="background-color:rgb(168, 105, 105);color:rgb(47, 61, 61);font-family: monospace;">
+            <div id="{{img.id}}" class="modal fade" role="dialog" style="background-color:rgb(105, 168, 160);color:rgb(47, 61, 61);font-family: monospace;">
                 <div class="modal-dialog">
                 
                     <!-- Modal content-->
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            
+                            <h3 class="modal-name"><strong>{{img.name}}</strong></h3>
+                        </div>
                         
-                        <h3 class="modal-name"><strong>{{img.name}}</strong></h3>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <img src="{{img.image_photo.url}}" alt="Image" width='400' length='500'>
-                        <p><strong><em>{{img.description}}</em></strong></p><br>
-                        <h5><strong>Taken in:</strong>{{img.location}}</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:rgb(168, 105, 105);color:white;">Close</button>
-                    </div>
+                        <div class="modal-body">
+                            <img src="{{img.image_photo.url}}" alt="Image" width='400' length='500'>
+                            <p><strong><em>{{img.description}}</em></strong></p><br>
+                            <h5><strong>Taken in:</strong>{{img.location}}</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:rgb(105, 166, 168);color:white;">Close</button>
+                        </div>
                     </div>
                 
                 </div>   
             </div>
-      
-    </div>
 
-{% endfor %}
+        </div>
+
+    {% endfor %}
+</body>
 {% endblock %}
 
