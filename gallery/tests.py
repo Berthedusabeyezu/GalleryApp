@@ -8,7 +8,7 @@ def setUp(self):
           self.cat=Category(category='sport')
           self.location=Location(photo_location='Rwanda')
           self.image=Image(image='jpg',name='CACO',description="has a good shape",location=self.location,category=self.cat)
-          
+
     def tearDown(self):
         Category.objects.all().delete()
         Location.objects.all().delete()
@@ -34,10 +34,7 @@ def setUp(self):
         images = Image.objects.all()
         self.assertTrue(len(images) == 0)
 
-    def test_get_image_by_id(self):
-        image1 = Image.get_image(id=self.image.id)
-        self.assertEqual(self.image, image1)
-
+   
     def test_get_images_by_category(self):
         images=Image.get_category_images(cat=self.cat)
         imagess=Image.objects.filter(category=self.cat)
