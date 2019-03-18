@@ -16,7 +16,7 @@
       <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Image" name="image">
+          <input type="text" class="form-control" placeholder="Search Image" name="category">
           <div class="input-group-btn">
             <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
           </div>
@@ -24,6 +24,14 @@
 
       </form>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn">Location</button>
+        <div class="dropdown-content">
+          <a href="/location/4">Profile</a>
+          <a href="/location/8">U.S.A</a>
+          <a href="/location/9">Kigali</a>
+        </div>
+      </div>
   </div>
 </nav>
 </body>

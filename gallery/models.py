@@ -39,12 +39,16 @@ class Category(models.Model):
     def update_category(self, update):
         self.category = update
         self.save()
+    @classmethod
+    def get_category_id(cls, id):
+        images = Category.objects.get(pk = id)
+        return images
 
 class Image(models.Model):
     name = models.CharField(max_length =60)
     description = models.TextField()
     location = models.ForeignKey(Location)
-    category = models.ManyToManyField(Category)
+    category = models.ForeignKey(Category)
     image_photo = models.ImageField(upload_to = 'images/')
 
     def save_image(self):
@@ -60,5 +64,11 @@ class Image(models.Model):
     
     @classmethod
     def search_by_category(cls,search_term):
-        gallery = cls.objects.filter(category__category__icontains=search_term)
-        return gallery
+        category = Category.objects.get(category=search_term)
+        images = cls.objects.filter(category=category)
+        return images
+
+    @classmethod
+    def filter_by_location(cls,locate):
+        images=Image.objects.filter(location__photo_location__icontains=locate)
+        return images

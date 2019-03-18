@@ -1,0 +1,9 @@
+{%extends 'all-galleries/base.html'%}
+    {% block content %} 
+
+        
+    {% for img in images %}
+    <p>{{img.name}}</p>
+    <img src="{{img.image_photo.url}}">
+   {% endfor %}
+{% endblock %}
